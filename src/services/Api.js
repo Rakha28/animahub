@@ -1,8 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
 
 class Api {
   constructor() {
-    this.kitsu = axios.create({ baseURL: 'https://kitsu.io/api/edge' })
+    this.kitsu = axios.create({ baseURL: 'https://kitsu.io/api/edge' });
   }
 
   async getCategoryId(slug) {
@@ -80,4 +80,6 @@ class Api {
   }
 }
 
-export default new Api()
+const apiInstance = new Api(); // Create an instance of the Api class
+
+export default apiInstance;
