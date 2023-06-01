@@ -12,7 +12,7 @@ function Browse() {
 
   useEffect(() => {
     function loadLocal() {
-      const data = JSON.parse(localStorage.getItem('@animeflix/home'))
+      const data = JSON.parse(localStorage.getItem('@animahub/home'))
 
       if (data) {
         setRows(data.rows)
@@ -58,7 +58,7 @@ function Browse() {
         animes: await Api.getByCategory('slice-of-life')
       }]
 
-      localStorage.setItem('@animeflix/home', JSON.stringify({
+      localStorage.setItem('@animahub/home', JSON.stringify({
         rows: rows,
         featured: featured
       }))
